@@ -39,27 +39,42 @@ You can run this repo virtually by using GitHub Codespaces, which will open a we
 
 Once the codespace opens (this may take several minutes), open a terminal window.
 
-### Local environment
+### Install PyRIT Library
 
-1. Install the required tools:
-
-    - [Azure Developer CLI](https://aka.ms/azure-dev/install)
-    - [Python 3.9, 3.10, or 3.11](https://www.python.org/downloads/)
-      - **Important**: Python and the pip package manager must be in the path in Windows for the setup scripts to work.
-      - **Important**: Ensure you can run `python --version` from console. On Ubuntu, you might need to run `sudo apt install python-is-python3` to link `python` to `python3`.
-    - [Node.js 18+](https://nodejs.org/download/)
-    - [Git](https://git-scm.com/downloads)
-    - [Powershell 7+ (pwsh)](https://github.com/powershell/powershell) - For Windows users only.
-      - **Important**: Ensure you can run `pwsh.exe` from a PowerShell terminal. If this fails, you likely need to upgrade PowerShell.
-
-2. Create a new folder and switch to it in the terminal.
-3. Run this command to download the project code:
-
+1. To install `conda`, run the following:
     ```shell
     azd init -t azure-search-openai-demo
+    mkdir -p ~/miniconda3 
+    wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh 
+    bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3 
+    rm ~/miniconda3/miniconda.sh 
+    source ~/miniconda3/bin/activate
+    conda init --all
     ```
+    Close your terminal and re-open it.
 
-    Note that this command will initialize a git repository, so you do not need to clone this repository.
+2. Next, we will create a conda environment that uses Python 3.11 (recommended for PyRIT).
+    ```shell
+    conda create -n pyrit-test python=3.11
+    ```
+3. To use the environment, we need to activate it.
+    ```shell
+    conda activate pyrit-test
+    ```
+4. Next, we will install PyRIT. First, we need to install git if you do not already have it.
+    ```shell
+    sudo apt update && sudo apt install git
+    ```
+5.  Clone the PyRIT repo locally.
+    ```shell
+    git clone https://github.com/S2FrdQ/PyRIT-GenAISecurity
+    cd PyRIT-GenAISecurity
+    ```
+6. Now, we will install PyRIT using pip (make sure you do not miss the period at the end).
+    ```shell
+    pip install .
+    ```
+    This will install all the packages needed for PyRIT and some other extremely useful tools that we will use in the next step. In particular, we will make use of JupyterLab.
 
 ## Deploying
 
