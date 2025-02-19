@@ -83,41 +83,18 @@ For Azure OpenAI, you can find these in `Azure Portal > Azure AI Services > Azur
 
 1. Login to your Azure account:
 
-    ```shell
-    azd auth login
-    ```
 
-    For GitHub Codespaces users, if the previous command fails, try:
+### Authenticate on Azure with Azure Subscription
 
-   ```shell
-    azd auth login --use-device-code
-    ```
+Since we are using a Azure OpenAI target(which interacts using AAD auth), you must authenticate to your Azure subscription. Depending on your operating system, download the appropriate Azure CLI tool from the links provided below:
 
-1. Create a new azd environment:
+- Windows OS: [Download link](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
+- Linux: [Download link](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt)
+- Mac OS: [Download link](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-macos)
 
-    ```shell
-    azd env new
-    ```
-
-    Enter a name that will be used for the resource group.
-    This will create a new folder in the `.azure` folder, and set it as the active environment for any calls to `azd` going forward.
-   1. (Optional) This is the point where you can customize the deployment by setting environment variables, in order to [use existing resources](docs/deploy_existing.md), [enable optional features (such as auth or vision)](docs/deploy_features.md), or [deploy low-cost options](docs/deploy_lowcost.md), or [deploy with the Azure free trial](docs/deploy_freetrial.md).
-1. Run `azd up` - This will provision Azure resources and deploy this sample to those resources, including building the search index based on the files found in the `./data` folder.
-    - **Important**: Beware that the resources created by this command will incur immediate costs, primarily from the AI Search resource. These resources may accrue costs even if you interrupt the command before it is fully executed. You can run `azd down` or delete the resources manually to avoid unnecessary spending.
-    - You will be prompted to select two locations, one for the majority of resources and one for the OpenAI resource, which is currently a short list. That location list is based on the [OpenAI model availability table](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models#model-summary-table-and-region-availability) and may become outdated as availability changes.
-1. After the application has been successfully deployed you will see a URL printed to the console.  Click that URL to interact with the application in your browser.
-It will look like the following:
-
-!['Output from running azd up'](docs/images/endpoint.png)
-
-> NOTE: It may take 5-10 minutes after you see 'SUCCESS' for the application to be fully deployed. If you see a "Python Developer" welcome screen or an error page, then wait a bit and refresh the page.
-
-### Deploying again
-
-If you've only changed the backend/frontend code in the `app` folder, then you don't need to re-provision the Azure resources. You can just run:
-
+After downloading and installing the Azure CLI, open your terminal and run the following command to log in:
 ```shell
-azd deploy
+az login
 ```
 
 If you've changed the infrastructure files (`infra` folder or `azure.yaml`), then you'll need to re-provision the Azure resources. You can do that by running:
