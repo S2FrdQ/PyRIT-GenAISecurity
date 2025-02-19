@@ -76,9 +76,9 @@ Once the codespace opens (this may take several minutes), open a terminal window
     ```
     This will install all the packages needed for PyRIT and some other extremely useful tools that we will use in the next step. In particular, we will make use of JupyterLab.
 
-## Deploying
+## Populate Azure OpenAI variables on `.env`
 
-The steps below will provision Azure resources and deploy the application code to Azure Container Apps. To deploy to Azure App Service instead, follow [the app service deployment guide](docs/azure_app_service.md).
+Nearly all of PyRIT’s targets require secrets to interact with. PyRIT primarily uses these by putting them in a local `.env` file. In this lab, we are dealing with Azure OpenAI, you need to have an Azure account and a subscription. Populate the `.env` file in your repo with the correct Azure OpenAI Keys, deployment names, and endpoints.
 
 1. Login to your Azure account:
 
