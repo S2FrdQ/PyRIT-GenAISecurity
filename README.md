@@ -53,7 +53,7 @@ Once the codespace opens (this may take several minutes), open a terminal window
     ```
     Close your terminal and re-open it.
 
-2. Next, we will create a conda environment that uses Python 3.11 (recommended for PyRIT).
+2. Next, we will create a conda environment that uses Python 3.11 (recommended).
     ```shell
     conda create -n pyrit-test python=3.11
     ```
