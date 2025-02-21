@@ -11,12 +11,12 @@ identify risks in generative AI systems.
 ## Table of Contents
 
 - [Getting Started](#getting-started)
-  - [Prerequisites](#github-codespaces)
-- [Install PyRIT Library](#deploying)
-- [Deploy AI model](#running-the-development-server)
-- [Populate Azure OpenAI variables on `.env`](#using-the-app)
-- [Login to your Azure account](#clean-up)
-- [Testing Gandalf Target](#guidance)
+  - [Prerequisites](#prerequisites)
+- [Install PyRIT Library](#install-pyrit-library)
+- [Deploy AI model](#deploy-ai-model)
+- [Populate Azure OpenAI variables on `.env`](#populate-azure-openai-variables-on-env)
+- [Login to your Azure account](#login-to-your-azure-account)
+- [Testing Gandalf Target](#testing-gandalf-target)
 
 
 ## Getting Started
