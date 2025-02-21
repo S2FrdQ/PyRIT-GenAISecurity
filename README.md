@@ -13,11 +13,10 @@ identify risks in generative AI systems.
 - [Getting Started](#getting-started)
   - [Prerequisites](#github-codespaces)
 - [Install PyRIT Library](#deploying)
-  - [Deploying again](#deploying-again)
-- [Running the development server](#running-the-development-server)
-- [Using the app](#using-the-app)
-- [Clean up](#clean-up)
-- [Guidance](#guidance)
+- [Deploy AI model](#running-the-development-server)
+- [Populate Azure OpenAI variables on `.env`](#using-the-app)
+- [Login to your Azure account](#clean-up)
+- [Testing Gandalf Target](#guidance)
 
 
 ## Getting Started
@@ -69,14 +68,19 @@ In this lab, we will be installing PyRIT locally and performing prompt injection
     ```
     This will install all the packages needed for PyRIT and some other extremely useful tools that we will use in the next step. In particular, we will make use of JupyterLab.
 
-## Populate Azure OpenAI variables on `.env`
+### Deploy AI model
+- Follow this guide to [create and deploy an AI model on Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
+- Once the model is deployed, get the Azure OpenAI Key, deployment name, and endpoint.
+![azureopenai](https://github.com/user-attachments/assets/596a75c8-e645-4f7f-b8dd-88a63217590b)
+
+
+### Populate Azure OpenAI variables on `.env`
 
 Nearly all of PyRIT’s targets require secrets to interact with. PyRIT primarily uses these by putting them in a local `.env` file. In this lab, we are dealing with Azure OpenAI, you need to have an Azure account and a subscription. Populate the `.env.example` file in your repo with the correct Azure OpenAI Keys, deployment names, and endpoints. **Then rename the file to `.env`**
 For Azure OpenAI, you can find these in `Azure Portal > Azure AI Services > Azure OpenAI > Your OpenAI Resource > Resource Management > Keys and Endpoint`.
 
-1. Login to your Azure account:
 
-
+## Login to your Azure account:
 ### Authenticate on Azure with Azure Subscription
 
 Since we are using a Azure OpenAI target(which interacts using AAD auth), you must authenticate to your Azure subscription. Depending on your operating system, download the appropriate Azure CLI tool from the links provided below:
