@@ -68,7 +68,7 @@ In this lab, we will be installing PyRIT locally and performing prompt injection
     This will install all the packages needed for PyRIT and some other extremely useful tools that we will use in the next step. In particular, we will make use of JupyterLab.
 
 ## Run Jupyter Lab
-In your ubuntu terminal, run 'jupyter lab' to start the Jupyter lab.
+In your ubuntu terminal, run `jupyter lab` to start the Jupyter lab.
 
 ## Deploy AI model
 - Follow this guide to [create and deploy an AI model on Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
