@@ -67,6 +67,9 @@ In this lab, we will be installing PyRIT locally and performing prompt injection
     ```
     This will install all the packages needed for PyRIT and some other extremely useful tools that we will use in the next step. In particular, we will make use of JupyterLab.
 
+## Run Jupyter Lab
+In your ubuntu terminal, run 'jupyter lab' to start the Jupyter lab.
+
 ## Deploy AI model
 - Follow this guide to [create and deploy an AI model on Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
 - Once the model is deployed, get the Azure OpenAI Key, deployment name, and endpoint.
@@ -92,9 +95,6 @@ After downloading and installing the Azure CLI, open your terminal and run the f
 ```shell
 az login
 ```
-
-##Run Jupyter Lab
-In your ubuntu terminal, run 'jupyter lab' to start the Jupyter lab.
 
 ## Testing Gandalf Target
 
