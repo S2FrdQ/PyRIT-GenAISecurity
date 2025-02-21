@@ -93,6 +93,9 @@ After downloading and installing the Azure CLI, open your terminal and run the f
 az login
 ```
 
+##Run Jupyter Lab
+In your ubuntu terminal, run 'jupyter lab' to start the Jupyter lab.
+
 ## Testing Gandalf Target
 
 Gandalf is similar to a real-world application you might be using PyRIT to test.
