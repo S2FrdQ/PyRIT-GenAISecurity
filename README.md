@@ -78,8 +78,8 @@ Once the codespace opens (this may take several minutes), open a terminal window
 
 ## Populate Azure OpenAI variables on `.env`
 
-Nearly all of PyRIT’s targets require secrets to interact with. PyRIT primarily uses these by putting them in a local `.env` file. In this lab, we are dealing with Azure OpenAI, you need to have an Azure account and a subscription. Populate the `.env` file in your repo with the correct Azure OpenAI Keys, deployment names, and endpoints.
-For Azure OpenAI, you can find these in `Azure Portal > Azure AI Services > Azure OpenAI > Your OpenAI Resource > Resource Management > Keys and Endpoint`
+Nearly all of PyRIT’s targets require secrets to interact with. PyRIT primarily uses these by putting them in a local `.env` file. In this lab, we are dealing with Azure OpenAI, you need to have an Azure account and a subscription. Populate the `.env.example` file in your repo with the correct Azure OpenAI Keys, deployment names, and endpoints. **Then rename the file to `.env`**
+For Azure OpenAI, you can find these in `Azure Portal > Azure AI Services > Azure OpenAI > Your OpenAI Resource > Resource Management > Keys and Endpoint`.
 
 1. Login to your Azure account:
 
