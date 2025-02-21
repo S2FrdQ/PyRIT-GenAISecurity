@@ -68,13 +68,13 @@ In this lab, we will be installing PyRIT locally and performing prompt injection
     ```
     This will install all the packages needed for PyRIT and some other extremely useful tools that we will use in the next step. In particular, we will make use of JupyterLab.
 
-### Deploy AI model
+## Deploy AI model
 - Follow this guide to [create and deploy an AI model on Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/create-resource?pivots=web-portal).
 - Once the model is deployed, get the Azure OpenAI Key, deployment name, and endpoint.
 ![azureopenai](https://github.com/user-attachments/assets/596a75c8-e645-4f7f-b8dd-88a63217590b)
 
 
-### Populate Azure OpenAI variables on `.env`
+## Populate Azure OpenAI variables on `.env`
 
 Nearly all of PyRIT’s targets require secrets to interact with. PyRIT primarily uses these by putting them in a local `.env` file. In this lab, we are dealing with Azure OpenAI, you need to have an Azure account and a subscription. Populate the `.env.example` file in your repo with the correct Azure OpenAI Keys, deployment names, and endpoints. **Then rename the file to `.env`**
 For Azure OpenAI, you can find these in `Azure Portal > Azure AI Services > Azure OpenAI > Your OpenAI Resource > Resource Management > Keys and Endpoint`.
