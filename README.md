@@ -31,9 +31,11 @@ You have a few options for setting up this project.
 The easiest way to get started is GitHub Codespaces, since it will setup all the tools for you,
 but you can also [set it up locally](#local-environment) if desired.
 
-### GitHub Codespaces
+### Prerequisites
 
-You can run this repo virtually by using GitHub Codespaces, which will open a web-based VS Code in your browser:
+- Ubuntu 24.04 LTS system (although this lab should work for other Linux distributions).
+    - For those using Windows, follow this [guide to install ubuntu on WSL](https://documentation.ubuntu.com/wsl/en/latest/howto/install-ubuntu-wsl2/).
+- 
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 
