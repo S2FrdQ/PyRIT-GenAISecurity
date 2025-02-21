@@ -10,14 +10,9 @@ identify risks in generative AI systems.
 
 ## Table of Contents
 
-- [Features](#features)
-- [Azure account requirements](#azure-account-requirements)
-  - [Cost estimation](#cost-estimation)
 - [Getting Started](#getting-started)
-  - [GitHub Codespaces](#github-codespaces)
-  - [VS Code Dev Containers](#vs-code-dev-containers)
-  - [Local environment](#local-environment)
-- [Deploying](#deploying)
+  - [Prerequisites](#github-codespaces)
+- [Install PyRIT Library](#deploying)
   - [Deploying again](#deploying-again)
 - [Running the development server](#running-the-development-server)
 - [Using the app](#using-the-app)
@@ -26,22 +21,18 @@ identify risks in generative AI systems.
 
 
 ## Getting Started
+In this lab, we will be installing PyRIT locally and performing prompt injection attacks on [Gandalf](https://gandalf.lakera.ai/) which is a game designed to challenge your ability to interact with large language models (LLMs). Before we start, I encourage you to access Gandalf and try out the prompt injections manually for [Level 1](https://gandalf.lakera.ai/baseline) and [2](https://gandalf.lakera.ai/do-not-tell). Feel free to do all 8 levels as well.
 
-You have a few options for setting up this project.
-The easiest way to get started is GitHub Codespaces, since it will setup all the tools for you,
-but you can also [set it up locally](#local-environment) if desired.
 
 ### Prerequisites
 
 - Ubuntu 24.04 LTS system (although this lab should work for other Linux distributions).
     - For those using Windows, follow this [guide to install ubuntu on WSL](https://documentation.ubuntu.com/wsl/en/latest/howto/install-ubuntu-wsl2/).
 - An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services).
+- Access permissions to [create Azure OpenAI resources and to deploy models](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/role-based-access-control).
 
-[![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 
-Once the codespace opens (this may take several minutes), open a terminal window.
-
-### Install PyRIT Library
+## Install PyRIT Library
 
 1. To install `conda`, run the following:
     ```shell
