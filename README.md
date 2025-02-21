@@ -35,7 +35,7 @@ but you can also [set it up locally](#local-environment) if desired.
 
 - Ubuntu 24.04 LTS system (although this lab should work for other Linux distributions).
     - For those using Windows, follow this [guide to install ubuntu on WSL](https://documentation.ubuntu.com/wsl/en/latest/howto/install-ubuntu-wsl2/).
-- 
+- An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services).
 
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 
